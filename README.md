@@ -311,10 +311,11 @@ local就是我们刚才添加的本地私有npm仓库，执行
 
 ## 总结
 
-  1.全程window环境，相信在mac, linux环境肯定也没问题的  
-  2.sql语句手动执行，创建database和table  
-  3.更改相关配置一切搞定  
-  4.全程没有使用cnpm这个，使用更方便nrm来切换仓库池  
+  1. 全程window环境，相信在mac, linux环境肯定也没问题的  
+  2. sql语句手动执行，创建database和table  
+  3. 更改相关配置一切搞定  
+  4. 全程没有使用cnpm这个，使用更方便nrm来切换仓库池  
+  5. 更多详细配置请查看cnpmjs.org官方文档
 
 [完整demo地址](https://github.com/twolun/window-cnpmjs)  
 [xxx-utils地址](https://github.com/twolun/xxx-utils)
