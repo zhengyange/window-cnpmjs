@@ -13,7 +13,7 @@
   $ npm run dev
 ```
 
-上面的最后一条命令执行肯定是会报错的，下面我们就按着报错提示，一个一个的解决  
+上面的最后一条命令执行肯定是会报错的，下面我们就按着报错提示，一个一个的解决    
 最终搭建自己完美的私有npm仓库
 
 ### 2. npm run dev报错
@@ -105,13 +105,13 @@ SequelizeDatabaseError: SQLITE_ERROR: no such table: module
     at Statement.errBack (D:\www\cnpmjs.org\node_modules\sqlite3\lib\sqlite3.js:16:21)
 ```
 
-  这些错误的意思简单说就是没有database，没有table，什么都没有，怎么办
-  `// - currently supported: 'mysql', 'sqlite', 'postgres', 'mariadb'`
+  这些错误的意思简单说就是没有database，没有table，什么都没有，怎么办  
+  `// - currently supported: 'mysql', 'sqlite', 'postgres', 'mariadb'`  
   这是cnpmjs支持的数据库列表，默认使用sqlite，我准备使用mysql，所以安装mysql请百度
 
 ### 4. 因为我们是在window上跑这个项目，所以一些自动化命令我们就不能使用了
 
-我们要手动执行sql语句，创建数据表，sql语句在`./docs/db.sql`
+我们要手动执行sql语句，创建数据表，sql语句在`./docs/db.sql`  
 为方便，使用navicat客户端工具（自己安装）
 
 #### 4.1 连接mysql
@@ -126,8 +126,8 @@ SequelizeDatabaseError: SQLITE_ERROR: no such table: module
 
 #### 4.3 执行sql
 
-在数据库`cnpmjs`名字上右键->命令行界面，将`./docs/db.sql`中的sql语句进行copy，
-粘贴到命令，回车执行ok。
+在数据库`cnpmjs`名字上右键->命令行界面，将`./docs/db.sql`中的sql语句进行copy，  
+粘贴到命令，回车执行ok。  
 特别注意有个`./docs/user.sql`，必须单独执行一下
 
 ![sql](./docs/img/sql.png)
@@ -254,7 +254,7 @@ local就是我们刚才添加的本地私有npm仓库，执行
     Logged in as admin on http://127.0.0.1:7001/.
 ```
 
-我们知道，要发布包到npm，需要有github仓库地址，现在我们就在github上建个demo作测试
+我们知道，要发布包到npm，需要有github仓库地址，现在我们就在github上建个demo作测试  
 实际使用应该使用公司内部的gitlab
 
 我们直接使用已有的[demo](https://github.com/twolun/xxx-utils)
@@ -279,7 +279,7 @@ local就是我们刚才添加的本地私有npm仓库，执行
 
 ![detail](./docs/img/detail.png)
 
-4.最后一点要注意，就是我们发布包的`package.json`文件里有包名的写法
+4.最后一点要注意，就是我们发布包的`package.json`文件里有包名的写法  
   尤其注意name的写法`@company`也是固定的，与`config/index.js`里的配置相对应
 
 ```json
@@ -311,9 +311,10 @@ local就是我们刚才添加的本地私有npm仓库，执行
 
 ## 总结
 
-  1.全程window环境，相信在mac, linux环境肯定也没问题的
-  2.sql语句手动执行，创建database和table
-  3.更改相关配置一切搞定
-  4.全程没有使用cnpm这个，使用更方便nrm来切换仓库池
+  1.全程window环境，相信在mac, linux环境肯定也没问题的  
+  2.sql语句手动执行，创建database和table  
+  3.更改相关配置一切搞定  
+  4.全程没有使用cnpm这个，使用更方便nrm来切换仓库池  
 
-[完整demo地址]()
+[完整demo地址](https://github.com/twolun/window-cnpmjs)  
+[xxx-utils地址](https://github.com/twolun/xxx-utils)
